@@ -1,12 +1,10 @@
+import SimpleLightbox from 'simplelightbox';
+
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 // Імпорт об'єктів галереї
 import { galleryItems } from './gallery-items';
 
-// Імпорт стилів SimpleLightbox
-import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів SimpleLightbox
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-// Створюємо галарею
 const galleryList = document.querySelector('.gallery');
 
 function createGallery(images) {
@@ -30,7 +28,7 @@ function createGallery(images) {
 
 createGallery(galleryItems);
 
-// Ініціалізуємо plugin lightbox та додаємо параметри
+
 const lightbox = new SimpleLightbox('.gallery a', {
   captionSelector: 'img',
   captionType: 'attr',
